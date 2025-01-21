@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function toh(n, start, end, middle) {
+            if (n == 0)
+                return;
+
+            toh(n - 1, start, middle, end);
+            console.log(`Disk ${n}move from start to ${start} to ${end}`);
+
+            toh(n - 1, middle, end, start);
+
+        }
+        toh(3, 'A', 'C', 'B');
+    </script>
+</body>
+
+</html>
